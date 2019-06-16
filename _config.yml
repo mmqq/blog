@@ -59,11 +59,26 @@ kramdown:
 
 
 
+
+# Gitalk
+gitalk:
+  enable: true   #是否开启Gitalk评论
+  clientID: 5d1012cac01aac2b4acf                            #生成的clientID
+  clientSecret: 665dd514b90665365fc9ea694efb4d5b9a3f11ed    #生成的clientSecret
+  repo: mmqq.github.io    #仓库名称
+  owner: mmqq   #github用户名
+  admin: mmqq
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+
+
+
+
 # 统计
 
 # Analytics settings
 # Baidu Analytics
-   ba_track_id: dcf7517b3603e745937720155b8a8c32
+ba_track_id: dcf7517b3603e745937720155b8a8c32
 
 # Google Analytics
 #ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
