@@ -4,7 +4,7 @@ SEOTitle: 小肥柴MoMoQQ
 header-img: img/post-bg-desk.jpg
 email: qjl625@sina.com
 description: "No No No."
-keyword: "BY Blog, MoMoQQ, 小肥柴"
+keyword: "BY, BY Blog, MoMoQQ, 小肥柴"
 url: "http://mmqq.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -20,9 +20,9 @@ RSS: false
 # weibo_username:     MoMoQQ
 #zhihu_username:     MoMoQQ
 github_username:    mmqq
-#facebook_username:  baiying.qiu.7
+#facebook_username:  
 jianshu_username:   59a10756e01b
-#twitter_username:   qiubaiying
+#twitter_username:   
 
 
 
@@ -60,11 +60,11 @@ kramdown:
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: false    #是否开启Gitalk评论
   clientID: 5d1012cac01aac2b4acf                            #生成的clientID
   clientSecret: 665dd514b90665365fc9ea694efb4d5b9a3f11ed    #生成的clientSecret
   repo: mmqq.github.io    #仓库名称
-  owner: mmqq    #github用户名
+  owner: mmqq   #github用户名
   admin: mmqq
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
@@ -73,11 +73,11 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
- ba_track_id: dcf7517b3603e745937720155b8a8c32
+   ba_track_id: dcf7517b3603e745937720155b8a8c32
 
 # Google Analytics
 #ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-#ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+#ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
@@ -102,3 +102,4 @@ friends: [
         href: "http://www.jianshu.com/u/59a10756e01b"
     }
 ]
+ 
