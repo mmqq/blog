@@ -5,7 +5,7 @@ header-img: img/post-bg-desk.jpg
 email: qjl625@sina.com
 description: "Every failure is leading towards success."
 keyword: "BY, BY Blog, MoMoQQ, 小肥柴"
-url: "http://mmqq.github.io/"          # your host, for absolute URL
+url: "http://mmqq.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Sidebar settings
