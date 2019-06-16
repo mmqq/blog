@@ -60,7 +60,7 @@ kramdown:
 
 # Gitalk
 gitalk:
-  enable: true   #是否开启Gitalk评论
+  enable: true    #是否开启Gitalk评论
   clientID: 5d1012cac01aac2b4acf                            #生成的clientID
   clientSecret: 665dd514b90665365fc9ea694efb4d5b9a3f11ed    #生成的clientSecret
   repo: mmqq.github.io    #仓库名称
