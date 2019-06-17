@@ -10,8 +10,8 @@ header-img: "img/404-bg.jpg"
 
     .simple-container {
     
-        text-align: -webkit-center;
-           text-align:  center;
+  text-align: -webkit-center;
+   text-align:  center;
     display: block;
     }
     .simple-container .lblp {
@@ -108,7 +108,7 @@ header-img: "img/404-bg.jpg"
 
 
 <!-- fenlei Change -->
-<script src="../js/jquery.min.js "></script>
+ 
 <script type="text/javascript">
         $(function () {
 
@@ -120,8 +120,8 @@ header-img: "img/404-bg.jpg"
 
             var _search = function () {
 
-                var tt, pp;
-
+                var tt;
+                debugger;
                 var txt = $("#iptt").val();
 
                 $.each(shilaji, function (i, n) {
@@ -156,8 +156,7 @@ header-img: "img/404-bg.jpg"
             }
 
 
-            $("#imgdiv").on("click", function () {
-
+            $("#imgdiv").on("click", function () { 
                 $("#imgdiv").removeClass("img_show").addClass("img_hide");
             });
 
