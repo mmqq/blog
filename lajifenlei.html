@@ -23,14 +23,26 @@ header-img: "img/404-bg.jpg"
     }
 
     .simple-container .iptt {
-        width: 80%;
+           width: 80%;
+    vertical-align: middle;
+    text-align: justify;
+    display: inline-block;
+    height: 40px;
     }
 
     .simple-container .iptb {
-        width: 80%;
-        margin: 20px 0;
-    }
+   width: 80%;
+    margin: 20px 0;
+    border-radius: 9px;
+    line-height:1.2
+      
 
+    }
+    .ultxt li{
+
+    text-align: left;
+    line-height: 2;
+    }
     .leixing.shilaji {
         color: #8a6d3b;
     }
@@ -61,7 +73,8 @@ header-img: "img/404-bg.jpg"
         margin: 0px auto;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.5);   
+         z-index: 9;
     }
 
         .img_show .img {
@@ -75,9 +88,9 @@ header-img: "img/404-bg.jpg"
         垃圾是啥类型？
     </p>
 
-    <input type="text" style="" class="iptt" id="iptt" placeholder="请输入对应文字">
+    <input type="text" style="" class="iptt" id="form-control iptt" placeholder="请输入对应文字">
 
-    <input type="button" style="" class="iptb" id="iptb" value="开始搜索">
+    <input type="button" style="" class="btn btn-success iptb" id="iptb" value="开始搜索">
 
     <ul class="ultxt" id="ulresult">
 
