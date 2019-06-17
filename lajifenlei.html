@@ -1,0 +1,163 @@
+---
+layout: simple
+title: "垃圾分类"
+description: "垃圾分类选择."
+header-img: "img/404-bg.jpg"
+---
+
+
+<style>
+    .simple-container .lblp {
+        font-weight: 200;
+        font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+        line-height: 1.7;
+        color: #0085a1;
+        font-size: 21px !important;
+    }
+
+    .simple-container .iptt {
+        width: 80%;
+    }
+
+    .simple-container .iptb {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .leixing.shilaji {
+        color: #8a6d3b;
+    }
+
+    .leixing.ganlaji {
+        color: #3c763d;
+    }
+
+    .leixing.kehuishou {
+        color: #337ab7;
+    }
+
+    .leixing.youhailaji {
+        color: #dd2f11;
+    }
+
+    .img_hide {
+        display: none;
+    }
+
+    .img_show {
+        position: absolute;
+        text-align: center;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        margin: 0px auto;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+        .img_show .img {
+            width: 90%;
+            padding-top: 10%;
+        }
+</style>
+<!-- Chinese Version -->
+<div class="zh simple-container">
+    <p class="lblp">
+        垃圾是啥类型？
+    </p>
+
+    <input type="text" style="" class="iptt" id="iptt" placeholder="请输入对应文字">
+
+    <input type="button" style="" class="iptb" id="iptb" value="开始搜索">
+
+    <ul class="ultxt" id="ulresult">
+
+        <li>
+            <span class="wupin"> 点击【开始搜索】后返回对应类型</span>  <span class="leixing"> </span>
+        </li>
+
+    </ul>
+    <div class="img_hide" id="imgdiv">
+        <img src="img/f0.png" class="img" />
+
+
+    </div>
+
+
+</div>
+
+
+<!-- fenlei Change -->
+<script type="text/javascript">
+        $(function () {
+
+            var shilaji = ["八宝粥", "茶叶","糕饼", "糖果", "风干食品(肉干、红枣、中药材)", "粉末类食品(冲泡饮料、面粉)", "宠物饲料", "菠萝包", "KFC薯条", "果皮", "蛋壳", "茶渣", "火锅汤底(沥干后的固体废弃物)", "鱼骨", "碎骨", "茶叶渣", "咖啡渣", "小龙虾", "过期食品"];
+            var ganlaji = ["1号电池", "KFC包装盒", "纸尿裤", "猫砂", "狗尿垫", "头发", "大骨头", "硬贝壳", "硬果壳(椰子壳、榴莲壳、核桃壳、玉米衣、甘蔗皮)", "硬果实(榴莲核、菠萝蜜核)", "创可贴", "纸抽", "抽纸", "餐巾纸", "创口贴", "医用棉签", "水彩笔", "医用纱布", "过期化妆品", "发胶", "医用手套", "编织袋", "防碎气泡膜", "镜子", "陶瓷制品", "竹制品(竹篮、竹筷、牙签)"];
+            var kehuishou = ["KFC纸袋", "被单", "PET塑料瓶", "玻璃杯","报纸","书","信封","酒瓶","可乐罐","易拉罐","锅","指甲钳","拖线板","插座","香水瓶","衣架","电路板","电线","纸板箱","报纸","快递纸袋","打印纸","广告单","纸塑铝复合包装(利乐包)"];
+            var youhailaji = ["笔记本电池", "废旧小家电", "灯泡","废灯管","废油漆","老鼠药(毒鼠强)","杀虫喷雾罐"];
+
+
+            var _search = function () {
+
+                var tt, pp;
+
+                var txt = $("#iptt").val();
+
+                $.each(shilaji, function (i, n) {
+                    if (n.indexOf(txt) >= 0) {
+                        $("#ulresult").append(" <li> <span class=\"wupin\">" + n + " </span>  <span class=\"leixing shilaji\">" + "湿垃圾" + " </span></li>");
+                    }
+                });
+
+                $.each(ganlaji, function (i, n) {
+                    if (n.indexOf(txt) >= 0) {
+                        $("#ulresult").append(" <li> <span class=\"wupin\">" + n + " </span>  <span class=\"leixing ganlaji\">" + "干垃圾" + " </span></li>");
+                    }
+                });
+
+                $.each(kehuishou, function (i, n) {
+                    if (n.indexOf(txt) >= 0) {
+                        $("#ulresult").append(" <li> <span class=\"wupin\">" + n + " </span>  <span class=\"leixing kehuishou\">" + "可回收" + " </span></li>");
+                    }
+                });
+
+                $.each(youhailaji, function (i, n) {
+                    if (n.indexOf(txt) >= 0) {
+                        $("#ulresult").append(" <li> <span class=\"wupin\">" + n + " </span>  <span class=\"leixing youhailaji\">" + "有害垃圾" + " </span></li>");
+                    }
+                });
+                if ($("#ulresult li").length == 0) {
+                    $("#ulresult").append(" <li> <span class=\"putong\">没有找到对应类型，可变换搜索词 </span></li>");
+                    $("#imgdiv").addClass("img_show").removeClass("img_hide");
+
+                } 
+
+            }
+
+
+            $("#imgdiv").on("click", function () {
+
+                $("#imgdiv").removeClass("img_show").addClass("img_hide");
+            });
+
+
+
+            $("#iptb").on("click", function () {
+                $("#ulresult").html("");
+                _search();
+            });
+
+
+
+        })
+
+
+
+</script>
+
+
+
+
+
